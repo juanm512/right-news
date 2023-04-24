@@ -2,8 +2,14 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useTheme } from "next-themes"
 
+import useHasMounted from "@/utils/hooks/useHasMounted"
+
 export default function ThemeBG() {
   const { theme } = useTheme()
+  const hasMounted = useHasMounted()
+  if (!hasMounted) {
+    return null
+  }
 
   return (
     <AnimatePresence mode="wait">
