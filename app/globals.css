@@ -3,25 +3,70 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* set values for scrollbar */
+  --scrollbar-width: 10px;
+  --scrollbar-thumb-radius: 5px;
+  --scrollbar-thumb-border-radius: 5px;
+  --scrollbar-thumb-border-width: 0px;
+  --scrollbar-thumb-border-style: solid;
+  --scrollbar-thumb-border-color: transparent;
+  --scrollbar-track-color: rgb(235, 235, 235);
+  --scrollbar-thumb-color: rgb(182, 181, 181);
+  --scrollbar-thumb-hover-color: rgb(150 150 150);
+
+  /* set values for dark mode */
+  --scrollbar-dark-track-color: rgb(23 23 23);
+  --scrollbar-dark-thumb-color: rgb(100 100 100);
+  --scrollbar-dark-thumb-hover-color: rgb(150 150 150);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* set scrollbar styles */
+html {
+  background: rgb(235, 235, 235);
+
+  scrollbar-width: var(--scrollbar-width);
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+  border: var(--scrollbar-thumb-border-width)
+    var(--scrollbar-thumb-border-style) var(--scrollbar-thumb-border-color);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+/* set scrollbar styles for hover */
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
+}
+
+/* for dark mode */
+/* set scrollbar styles for dark mode (html has dark class) */
+/* only for dark */
+
+html:not(.light) {
+  scrollbar-color: var(--scrollbar-dark-thumb-color)
+    var(--scrollbar-dark-track-color);
+}
+
+html:not(.light) ::-webkit-scrollbar-track {
+  background: var(--scrollbar-dark-track-color);
+}
+
+html:not(.light) ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-dark-thumb-color);
+}
+
+html:not(.light) ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-dark-thumb-hover-color);
 }
