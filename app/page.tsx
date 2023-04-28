@@ -1,17 +1,27 @@
-import Image from "next/image"
 import { Inter } from "next/font/google"
-import ThemeButton from "@/components/ThemeButton"
+import dynamic from "next/dynamic"
+
+const PrincipalNews = dynamic(
+  () => import("@/components/MainPageSections/PrincipalNews")
+)
+const Opinion = dynamic(() => import("@/components/MainPageSections/Opinion"))
+const Sports = dynamic(() => import("@/components/MainPageSections/Sports"))
+const International = dynamic(
+  () => import("@/components/MainPageSections/International")
+)
+const Economy = dynamic(() => import("@/components/MainPageSections/Economy"))
 
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
   return (
     // wrap the page in a div with the dark mode class
-    <main
-      className={
-        inter.className +
-        "flex min-h-screen flex-col items-center justify-between p-24"
-      }
-    ></main>
+    <main className={inter.className + "flex min-h-screen flex-col py-8 px-16"}>
+      <PrincipalNews />
+      <Opinion />
+      <Sports />
+      <Economy />
+      <International />
+    </main>
   )
 }

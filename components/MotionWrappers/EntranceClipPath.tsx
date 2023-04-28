@@ -16,6 +16,7 @@ type EntranceClipPathProps = {
   duration?: number
   delay?: number
   className?: string
+  showInView?: boolean
 }
 
 const variants = {
@@ -50,18 +51,40 @@ export default function EntranceClipPath({
   direction = "down",
   duration = 0.5,
   delay = 0,
-  className = ""
+  className = "",
+  showInView = false
 }: EntranceClipPathProps) {
-  const hasMounted = useHasMounted()
-  if (!hasMounted) {
-    return <div className="opacity-0">{children}</div>
+  // const hasMounted = useHasMounted()
+  if (!showInView) {
+    return (
+      <div
+        className={
+          className +
+          ` animate-[clipPath${
+            direction.slice(0, 1).toUpperCase() + direction.slice(1)
+          }_${duration}s_ease-in-out]`
+        }
+      >
+        {children}
+      </div>
+    )
   }
 
   return (
     <motion.div
       initial={variants[direction]}
-      animate={{
-        clipPath: "inset(0 0 0 0)"
+      whileInView={showInView ? { clipPath: "inset(0 0 0 0)" } : undefined}
+      animate={
+        showInView
+          ? false
+          : {
+              clipPath: "inset(0 0 0 0)"
+            }
+      }
+      // exit={variants[direction]}
+      viewport={{
+        once: true,
+        amount: "some"
       }}
       transition={{
         duration: duration,

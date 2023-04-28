@@ -8,13 +8,15 @@ type EntranceOpacityProps = {
   duration?: number
   delay?: number
   className?: string
+  showInView?: boolean
 }
 
 export default function EntranceOpacity({
   children,
   duration = 0.75,
   delay = 0,
-  className
+  className = "",
+  showInView = false
 }: EntranceOpacityProps) {
   const hasMounted = useHasMounted()
   if (!hasMounted) {
@@ -25,6 +27,7 @@ export default function EntranceOpacity({
       className={className}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      whileInView={showInView ? { opacity: 1 } : undefined}
       transition={{ duration, delay, ease: "easeInOut" }}
     >
       {children}

@@ -7,7 +7,10 @@ import ThemeBG from "@/components/themebg"
 import DayInformation from "@/components/NavBar/DayInformation"
 import MainNavBar from "@/components/NavBar/MainNavBar"
 import SectionsMenu from "@/components/NavBar/SectionsMenu"
-import EntranceClipPath from "@/components/MotionWrappers/EntranceClipPath"
+import Nav from "@/components/MotionWrappers/Nav"
+import NavHiddenOnScroll from "@/components/MotionWrappers/NavHiddenOnScroll"
+import Footer from "@/components/Footer/Main"
+// import EntranceClipPath from "@/components/MotionWrappers/EntranceClipPath"
 
 const inter = Inter({ subsets: ["cyrillic"] })
 
@@ -34,22 +37,25 @@ export default function RootLayout({
           href="/Logo-Simple-LDD.png"
         />
       </head>
-      <body className={inter.className + " px-8"}>
+      <body className={inter.className + " px-8 mt-72"}>
         <Providers>
           <ThemeBG />
-          <nav className="flex items-center justify-between flex-wrap py-4">
+          <Nav>
             {/* day information */}
             <DayInformation />
 
             {/* Barra de separacion */}
-            <EntranceClipPath
+            {/* <EntranceClipPath
               direction="right"
               delay={0.3}
               duration={2.7}
               className="w-full"
-            >
-              <div className="w-full h-2 bg-black/90 dark:bg-gray-300/90 my-2" />
-            </EntranceClipPath>
+            > */}
+            <NavHiddenOnScroll
+              hiddenClass={["h-px my-1", "h-2 my-2"]}
+              className=" w-full bg-black/90 dark:bg-gray-300/90 animate-[clipPathRight_2.1s_ease-out]"
+            />
+            {/* </EntranceClipPath> */}
 
             {/* donaciones | logo | (search, user, theme)  
             // this or the next one have to be sticky 
@@ -61,35 +67,32 @@ export default function RootLayout({
             <MainNavBar />
 
             {/* Barra de separacion */}
-            <EntranceClipPath
+            {/* <EntranceClipPath
               direction="right"
               delay={0.6}
               duration={2.4}
               className="w-full"
-            >
-              <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
-            </EntranceClipPath>
+            > */}
+            <div className="w-full h-px bg-black dark:bg-gray-300 my-2 animate-[clipPathRight_2.1s_ease-out]" />
+            {/* </EntranceClipPath> */}
 
             {/* menu for more sections | sections...  */}
             <SectionsMenu />
 
             {/* Barra de separacion */}
-            <EntranceClipPath
+            {/* <EntranceClipPath
               direction="right"
               delay={0.9}
               duration={2.1}
               className="w-full"
-            >
-              <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
-            </EntranceClipPath>
-          </nav>
+            > */}
+            <div className="w-full h-px bg-black dark:bg-gray-300 mt-2 animate-[clipPathRight_2.1s_ease-out]" />
+            {/* </EntranceClipPath> */}
+          </Nav>
 
           {children}
 
-          <footer className="flex items-center justify-between flex-wrap py-4">
-            <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
-            <DayInformation />
-          </footer>
+          <Footer />
         </Providers>
       </body>
     </html>
