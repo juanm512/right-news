@@ -26,9 +26,19 @@ export default function EntranceOpacity({
     <motion.div
       className={className}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={
+        showInView
+          ? false
+          : {
+              opacity: 1
+            }
+      }
       whileInView={showInView ? { opacity: 1 } : undefined}
-      transition={{ duration, delay, ease: "easeInOut" }}
+      viewport={{
+        once: true,
+        amount: "some"
+      }}
+      transition={{ duration: duration, delay: delay, ease: "easeInOut" }}
     >
       {children}
     </motion.div>

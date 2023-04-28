@@ -11,9 +11,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       defaultTheme="light"
     >
       {/* ACA AGREGAR ALGUN BOTON DE CONFIGURACION PARA QUE EL USUARIO PUEDA ELEGIR SI QUIERE ANIMACIONES O NO */}
-      <MotionConfig reducedMotion="always">
-        <LazyMotion features={domAnimation}>{children}</LazyMotion>
-      </MotionConfig>
+      {/* <MotionConfig reducedMotion="always"> */}
+      <LazyMotion features={domAnimation}>{children}</LazyMotion>
+      {/* </MotionConfig> */}
     </ThemeProvider>
   )
 }

@@ -32,7 +32,9 @@ export default function NewspaperEdition() {
           Edición Argentina
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4 inline-block ml-2"
+            className={`w-4 h-4 inline-block ml-2 transition-transform duration-300 ${
+              isMenuOpen ? "rotate-180" : ""
+            }`}
             width={24}
             height={24}
             viewBox="0 0 24 24"
@@ -53,7 +55,7 @@ export default function NewspaperEdition() {
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="z-10 min-w-[100px] bg-neutral-100 dark:bg-neutral-800 dark:text-white rounded-md p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+          className="z-10 min-w-[100px] bg-neutral-100 dark:bg-neutral-800 dark:text-white rounded-md p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=bottom]:animate-[yDownOpacity_0.3s_ease-out]"
           sideOffset={5}
         >
           <DropdownMenu.Item

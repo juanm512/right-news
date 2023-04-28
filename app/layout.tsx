@@ -1,4 +1,5 @@
 import "./globals.css"
+import dynamic from "next/dynamic"
 import { Inter } from "next/font/google"
 
 import Providers from "@/components/providers"
@@ -9,7 +10,7 @@ import MainNavBar from "@/components/NavBar/MainNavBar"
 import SectionsMenu from "@/components/NavBar/SectionsMenu"
 import Nav from "@/components/MotionWrappers/Nav"
 import NavHiddenOnScroll from "@/components/MotionWrappers/NavHiddenOnScroll"
-import Footer from "@/components/Footer/Main"
+const Footer = dynamic(() => import("@/components/Footer/Main"))
 // import EntranceClipPath from "@/components/MotionWrappers/EntranceClipPath"
 
 const inter = Inter({ subsets: ["cyrillic"] })

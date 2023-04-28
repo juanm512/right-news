@@ -7,7 +7,7 @@ import { useTheme } from "next-themes"
 export default function SettingsButton() {
   const { theme, setTheme } = useTheme()
 
-  const [reduceMotion, setReduceMotion] = React.useState(false)
+  // const [reduceMotion, setReduceMotion] = React.useState(false)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const { scrollY }: any = useScroll()
 
@@ -29,7 +29,9 @@ export default function SettingsButton() {
     >
       <DropdownMenu.Trigger asChild>
         <button
-          className="p-1 rounded-full"
+          className={`p-1 rounded-full hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-transform duration-500 delay-100 ${
+            isMenuOpen ? "rotate-180" : ""
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span className="sr-only"></span>
@@ -57,7 +59,7 @@ export default function SettingsButton() {
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="z-10 min-w-[220px] bg-neutral-100 dark:bg-neutral-800 dark:text-white rounded-md p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+          className="z-10 min-w-[220px] bg-neutral-100 dark:bg-neutral-800 dark:text-white rounded-md p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=left]:animate-[xLeftOpacity_0.3s_ease-out]"
           sideOffset={5}
           side="left"
           hideWhenDetached={true}
@@ -89,7 +91,7 @@ export default function SettingsButton() {
 
           <DropdownMenu.Separator className="h-[1px] bg-black m-[5px] dark:bg-white" />
 
-          <DropdownMenu.CheckboxItem
+          {/* <DropdownMenu.CheckboxItem
             className="group text-[13px] cursor-pointer leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
             checked={reduceMotion}
             onCheckedChange={setReduceMotion}
@@ -113,7 +115,7 @@ export default function SettingsButton() {
             Reducir Animaciones
           </DropdownMenu.CheckboxItem>
 
-          <DropdownMenu.Separator className="h-[1px] bg-black m-[5px] dark:bg-white" />
+          <DropdownMenu.Separator className="h-[1px] bg-black m-[5px] dark:bg-white" /> */}
 
           <DropdownMenu.Label className="pl-[25px] text-xs leading-[25px] italic">
             Tema

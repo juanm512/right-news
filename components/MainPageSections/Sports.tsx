@@ -15,8 +15,8 @@ export default function Sports() {
         <EntranceClipPath
           direction="right"
           showInView={true}
-          delay={1.5}
-          duration={1.5}
+          delay={0.1}
+          duration={0.7}
           className="w-full flex flex-row items-end justify-end"
         >
           <h2
@@ -34,108 +34,132 @@ export default function Sports() {
       <EntranceClipPath
         direction="right"
         showInView={true}
-        delay={0.9}
-        duration={2.1}
+        delay={0.1}
+        duration={0.7}
         className="w-full"
       >
         <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
       </EntranceClipPath>
 
       {/* trending/lastest news */}
-      <section className="basis-full flex flex-row-reverse gap-8 items-start justify-between dark:text-gray-100 py-16">
-        <div className="basis-1/4 flex flex-col justify-start">
-          <div className="aspect-w-9 aspect-h-12">
-            <Image
-              className="object-cover object-center z-0"
-              src="/fernandez-fracaso-gobern.png"
-              alt="placeholder"
-              width={1920}
-              height={1080}
-            />
+      <section className="basis-full flex flex-row gap-8 items-start justify-around dark:text-gray-100 py-16">
+        <div className="basis-7/12 flex flex-col justify-around gap-8">
+          <div className="flex flex-col-reverse justify-start gap-4">
+            <div className="aspect-video">
+              <Image
+                className="object-cover object-center z-0"
+                src="/f12023leclerc.webp"
+                alt="placeholder"
+                width={1920}
+                height={1080}
+              />
+            </div>
+
+            <div className="flex flex-row items-center justify-between py-2">
+              <h4 className="text-base font-medium">Juan Perez</h4>
+              <h4 className="text-sm font-medium">Hace 3 días</h4>
+            </div>
+
+            <div className="flex flex-row items-center justify-start py-4">
+              <h4 className={playfair.className + " text-3xl font-semibold"}>
+                Leclerc da la campanada con la pole, Sainz es cuarto y Alonso,
+                sin DRS, 6º
+              </h4>
+            </div>
           </div>
+          <div className="flex flex-col-reverse justify-start gap-4">
+            <div className="aspect-video">
+              <Image
+                className="object-cover object-center z-0"
+                src="/enzochelsea.png"
+                alt="placeholder"
+                width={1920}
+                height={1080}
+              />
+            </div>
 
-          {/* <div className="flex flex-row items-center text-sm justify-start gap-4 py-4">
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Politica
-            </h4>
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Fernandez
-            </h4>
-          </div> */}
+            <div className="flex flex-row items-center justify-between py-2">
+              <h4 className="text-base font-medium">Juan Perez</h4>
+              <h4 className="text-sm font-medium">Hace 3 días</h4>
+            </div>
 
-          <div className="flex flex-row items-center justify-start py-2">
-            <h4 className={playfair.className + " text-2xl font-semibold"}>
-              El presidente anuncia un nuevo plan de vacunacion
-            </h4>
-          </div>
-
-          <div className="flex flex-row items-center justify-between py-4">
-            <h4 className="text-sm font-medium">Hace 2 horas</h4>
-            <h4 className="text-sm font-medium">Por: Juan Perez</h4>
+            <div className="flex flex-row items-center justify-start py-4">
+              <h4 className={playfair.className + " text-3xl font-semibold"}>
+                Frank Lampard salió a defender a Enzo Fernández: “Creo que es un
+                talento fantástico, es el futuro del Chelsea”
+              </h4>
+            </div>
           </div>
         </div>
 
-        <div className="basis-1/2 flex flex-col-reverse justify-start gap-2">
-          <div className="aspect-w-12 aspect-h-9">
-            <Image
-              className="object-cover object-center z-0"
-              src="/fernandez-fracaso-gobern.png"
-              alt="placeholder"
-              width={1920}
-              height={1080}
-            />
+        <div className="basis-5/12 flex flex-col gap-8 justify-around">
+          <div className="flex flex-col justify-start">
+            <div className="aspect-square">
+              <Image
+                className="object-cover object-center z-0"
+                src="/garnacho.png"
+                alt="placeholder"
+                width={1920}
+                height={1080}
+              />
+            </div>
+
+            <div className="flex flex-row items-center justify-start py-2">
+              <h4 className={playfair.className + " text-2xl font-semibold"}>
+                El desesperado pedido de Garnacho a su entrenador para poder
+                jugar en la Selección Argentina
+              </h4>
+            </div>
+
+            <div className="flex flex-row items-center justify-between py-4">
+              <h4 className="text-sm font-medium">Hace 12 horas</h4>
+              <h4 className="text-sm font-medium">Por: Redaccion Deportes</h4>
+            </div>
           </div>
+          <div className="flex flex-col justify-start">
+            <div className="aspect-square">
+              <Image
+                className="object-cover object-center z-0"
+                src="/dibu.png"
+                alt="placeholder"
+                width={1920}
+                height={1080}
+              />
+            </div>
 
-          <div className="flex flex-row items-center justify-between py-2">
-            <h4 className="text-base font-medium">Juan Perez</h4>
-            <h4 className="text-sm font-medium">Hace 2 horas</h4>
+            <div className="flex flex-row items-center justify-start py-2">
+              <h4 className={playfair.className + " text-2xl font-semibold"}>
+                Preocupación en Aston Villa, el Dibu Martinez no pudo terminar
+                el partido frente al Bentford
+              </h4>
+            </div>
+
+            <div className="flex flex-row items-center justify-between py-4">
+              <h4 className="text-sm font-medium">Hace 12 horas</h4>
+              <h4 className="text-sm font-medium">Por: Redaccion Deportes</h4>
+            </div>
           </div>
+          <div className="flex flex-col justify-start">
+            <div className="aspect-square">
+              <Image
+                className="object-cover object-center z-0"
+                src="/sub20.png"
+                alt="placeholder"
+                width={1920}
+                height={1080}
+              />
+            </div>
 
-          <div className="flex flex-row items-center justify-start pb-4">
-            <h4 className={playfair.className + " text-5xl font-semibold"}>
-              El presidente anuncia un nuevo plan de vacunacion
-            </h4>
-          </div>
+            <div className="flex flex-row items-center justify-start py-2">
+              <h4 className={playfair.className + " text-2xl font-semibold"}>
+                Ya están conformados los grupos para el Mundial Sub 20
+              </h4>
+            </div>
 
-          {/* <div className="flex flex-row items-center text-sm justify-start gap-4 py-4">
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Politica
-            </h4>
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Fernandez
-            </h4>
-          </div> */}
-        </div>
-
-        <div className="basis-1/4 flex flex-col justify-start gap-4">
-          <div className="aspect-w-9 aspect-h-12">
-            <Image
-              className="object-cover object-center z-0"
-              src="/fernandez-fracaso-gobern.png"
-              alt="placeholder"
-              width={1920}
-              height={1080}
-            />
-          </div>
-
-          {/* <div className="flex flex-row items-center text-sm justify-start gap-4 py-4">
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Politica
-            </h4>
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Fernandez
-            </h4>
-          </div> */}
-
-          <div className="flex flex-row items-center justify-start py-2">
-            <h4 className={playfair.className + " text-2xl font-semibold"}>
-              El presidente anuncia un nuevo plan de vacunacion
-            </h4>
-          </div>
-
-          <div className="flex flex-row items-center justify-between py-4">
-            <h4 className="text-sm font-medium">Hace 2 horas</h4>
-            <h4 className="text-sm font-medium">Por: Juan Perez</h4>
+            <div className="flex flex-row items-center justify-between py-4">
+              <h4 className="text-sm font-medium">Hace 12 horas</h4>
+              <h4 className="text-sm font-medium">Por: Redaccion Deportes</h4>
+            </div>
           </div>
         </div>
       </section>
@@ -143,12 +167,12 @@ export default function Sports() {
       {/* Pill button */}
       <div className="w-full flex flex-row items-center justify-center py-8 dark:text-gray-100">
         <EntranceOpacity
-          delay={2}
+          delay={0.3}
           duration={1}
           showInView={true}
         >
           <button className="px-4 py-2 border rounded-full border-black dark:border-gray-300">
-            <h4 className="text-sm font-medium">Ver mas opiniones</h4>
+            <h4 className="text-sm font-medium">Ver mas acerca de deportes</h4>
           </button>
         </EntranceOpacity>
       </div>

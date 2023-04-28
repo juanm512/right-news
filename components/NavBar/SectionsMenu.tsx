@@ -33,7 +33,7 @@ export default function SectionsMenu() {
       {/* </EntranceScale> */}
 
       {/* sections */}
-      <div className="basis-8/12 flex flex-row items-center justify-between gap-4">
+      <div className="basis-10/12 flex flex-row items-center justify-around gap-4">
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
@@ -77,8 +77,7 @@ export default function SectionsMenu() {
       </div>
 
       {/* Search button */}
-      <div className="basis-1/12 flex flex-row items-center justify-end animate-[opacity_1s_0.05s_ease-in-out]">
-        {/* <EntranceScale delay={0.75}> */}
+      {/* <div className="basis-1/12 flex flex-row items-center justify-end animate-[opacity_1s_0.05s_ease-in-out]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6 h-6"
@@ -106,8 +105,7 @@ export default function SectionsMenu() {
             y2={15}
           ></line>
         </svg>
-        {/* </EntranceScale> */}
-      </div>
+      </div> */}
     </div>
   )
 }

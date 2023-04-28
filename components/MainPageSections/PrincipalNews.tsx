@@ -88,7 +88,7 @@ export default function PrincipalNews() {
           direction="upRight"
           showInView={true}
           delay={0.5}
-          duration={2.5}
+          duration={1}
           className="w-full flex flex-col items-start justify-start"
         >
           <div
@@ -185,7 +185,7 @@ export default function PrincipalNews() {
         <div className="basis-1/2 flex flex-col justify-start">
           <Image
             className="h-fit w-full object-contain object-center z-0"
-            src="/fernandez-fracaso-gobern.png"
+            src="/image-353-1024x535.png"
             alt="placeholder"
             width={1080}
             height={1920}
@@ -196,19 +196,22 @@ export default function PrincipalNews() {
               Politica
             </h4>
             <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-              Fernandez
+              Estados Unidos
             </h4>
           </div>
 
           <div className="flex flex-row items-center justify-start py-2">
             <h4 className={playfair.className + " text-3xl font-semibold"}>
-              El presidente anuncia un nuevo plan de vacunacion
+              Kennedy Jr: Quién es el nuevo candidato a presidente en el Partido
+              Demócrata
             </h4>
           </div>
 
           <div className="flex flex-row items-center justify-between py-4">
-            <h4 className="text-sm font-medium">Hace 2 horas</h4>
-            <h4 className="text-sm font-medium">Por: Juan Perez</h4>
+            <h4 className="text-sm font-medium">Hace 5 horas</h4>
+            <h4 className="text-sm font-medium">
+              Por: Redaccion Internacional
+            </h4>
           </div>
         </div>
 
@@ -216,8 +219,8 @@ export default function PrincipalNews() {
           <div className="basis-full flex flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
-                className="h-fit w-full object-contain object-center z-0"
-                src="/fernandez-fracaso-gobern.png"
+                className="h-full w-full object-contain object-center z-0"
+                src="/image-347.png"
                 alt="placeholder"
                 width={1080}
                 height={1920}
@@ -226,7 +229,10 @@ export default function PrincipalNews() {
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
                 <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-                  Politica
+                  Argentina
+                </h4>
+                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                  Economia
                 </h4>
               </div>
 
@@ -237,21 +243,24 @@ export default function PrincipalNews() {
                     " text-2xl font-semibold max-h-32 overflow-hidden"
                   }
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pérsico: “Massa me pidió que apretemos juntos a los
+                  empresarios para que bajen los precios”
                 </h4>
               </div>
 
               <div className="basis-2/12 flex flex-row items-center justify-between">
-                <h4 className="text-sm font-normal">Hace 2 horas</h4>
-                <h4 className="text-sm font-normal">Por: Juan Perez</h4>
+                <h4 className="text-sm font-normal">Hace 23 horas</h4>
+                <h4 className="text-sm font-normal">
+                  Por: Redaccion Argentiona
+                </h4>
               </div>
             </div>
           </div>
           <div className="basis-full flex flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
-                className="h-fit w-full object-contain object-center z-0"
-                src="/fernandez-fracaso-gobern.png"
+                className="h-full w-full object-contain object-center z-0"
+                src="/erdogabn.png"
                 alt="placeholder"
                 width={1080}
                 height={1920}
@@ -260,7 +269,10 @@ export default function PrincipalNews() {
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
                 <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-                  Politica
+                  Internacional
+                </h4>
+                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                  Turquia
                 </h4>
               </div>
 
@@ -271,21 +283,24 @@ export default function PrincipalNews() {
                     " text-2xl font-semibold max-h-32 overflow-hidden"
                   }
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Erdogan cancela sus apariciones electorales por motivos de
+                  salud
                 </h4>
               </div>
 
               <div className="basis-2/12 flex flex-row items-center justify-between">
-                <h4 className="text-sm font-normal">Hace 2 horas</h4>
-                <h4 className="text-sm font-normal">Por: Juan Perez</h4>
+                <h4 className="text-sm font-normal">Hace 1 día</h4>
+                <h4 className="text-sm font-normal">
+                  Por: Redaccion Internacional
+                </h4>
               </div>
             </div>
           </div>
           <div className="basis-full flex flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
-                className="h-fit w-full object-contain object-center"
-                src="/fernandez-fracaso-gobern.png"
+                className="h-full w-full object-contain object-center"
+                src="/maratea.png"
                 alt="placeholder"
                 width={1080}
                 height={1920}
@@ -294,7 +309,7 @@ export default function PrincipalNews() {
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
                 <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
-                  Politica
+                  Deportes
                 </h4>
               </div>
 
@@ -305,7 +320,7 @@ export default function PrincipalNews() {
                     " text-2xl font-semibold max-h-32 overflow-hidden"
                   }
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Santi Maratea arranco la colecta para salvar a Independiente
                 </h4>
               </div>
 
@@ -321,7 +336,7 @@ export default function PrincipalNews() {
       {/* Pill button */}
       <div className="w-full flex flex-row items-center justify-center py-8 dark:text-gray-100">
         <EntranceOpacity
-          delay={2}
+          delay={0.3}
           duration={1}
           showInView={true}
         >

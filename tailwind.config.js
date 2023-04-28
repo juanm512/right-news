@@ -74,36 +74,36 @@ module.exports = {
           },
         // below this is x entrance
         xLeft: {
-          from:{ transform: "translateX(-150%)" },
+          from:{ transform: "translateX(-100px)" },
           to:{ transform: "translateX(0)" }
         },
         xRight: {
-          from:{ transform: "translateX(150%)" },
+          from:{ transform: "translateX(100px)" },
           to:{ transform: "translateX(0)" }
         },
-          xUpOpacity: {
-            from:{ transform: "translateX(-150%)", opacity: 0 },
+          xLeftOpacity: {
+            from:{ transform: "translateX(-100px)", opacity: 0 },
             to:{ transform: "translateX(0)", opacity: 1 }
           },
-          xDownOpacity: {
-            from:{ transform: "translateX(150%)", opacity: 0 },
+          xRightOpacity: {
+            from:{ transform: "translateX(100px)", opacity: 0 },
             to:{ transform: "translateX(0)", opacity: 1 }
           },
         // below this is y entrance
         yUp: {
-          from:{ transform: "translateY(-150%)" },
+          from:{ transform: "translateY(-100px)" },
           to:{ transform: "translateY(0)" }
         },
         yDown: {
-          from:{ transform: "translateY(150%)" },
+          from:{ transform: "translateY(100px)" },
           to:{ transform: "translateY(0)" }
         },
           yUpOpacity: {
-            from:{ transform: "translateY(-150%)", opacity: 0 },
+            from:{ transform: "translateY(-100px)", opacity: 0 },
             to:{ transform: "translateY(0)", opacity: 1 }
           },
           yDownOpacity: {
-            from:{ transform: "translateY(150%)", opacity: 0 },
+            from:{ transform: "translateY(100px)", opacity: 0 },
             to:{ transform: "translateY(0)", opacity: 1 }
           },
       },

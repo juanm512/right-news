@@ -35,15 +35,17 @@ export default function Nav({ children }: { children: React.ReactNode }) {
   /** add this const **/
   const variants = {
     /** this is the "visible" key and it's correlating styles **/
-    visible: { opacity: 1, y: 0, zIndex: 10 },
+    visible: { opacity: 1, y: 0 },
     /** this is the "hidden" key and it's correlating styles **/
-    hidden: { opacity: 0, y: -25, zIndex: -1 }
+    hidden: { opacity: 0, y: -25 }
   }
 
   return (
     <>
       <motion.nav
-        className="fixed z-10 top-0 flex items-center justify-between flex-wrap pt-4 backdrop-blur pr-8"
+        className={`fixed z-10 top-0 flex items-center justify-between flex-wrap pt-4 pr-8 transition-transform duration-500 delay-100 ${
+          hidden ? "z-[-1]" : "z-10 backdrop-blur"
+        }`}
         variants={variants}
         /** it's right here that we match our boolean state with these variant keys **/
         animate={hidden ? "hidden" : "visible"}

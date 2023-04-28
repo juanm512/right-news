@@ -7,6 +7,7 @@ type EntranceYProps = {
   direction?: "up" | "down"
   duration?: number
   delay?: number
+  showInView?: boolean
 }
 
 const variants = {
@@ -14,20 +15,12 @@ const variants = {
     initial: {
       y: 100,
       opacity: 0
-    },
-    animate: {
-      y: 0,
-      opacity: 1
     }
   },
   down: {
     initial: {
       y: -100,
       opacity: 0
-    },
-    animate: {
-      y: 0,
-      opacity: 1
     }
   }
 }
@@ -36,7 +29,8 @@ export default function EntranceY({
   children,
   direction = "down",
   duration = 0.5,
-  delay = 0
+  delay = 0,
+  showInView = false
 }: EntranceYProps) {
   const hasMounted = useHasMounted()
   if (!hasMounted) {
@@ -47,12 +41,16 @@ export default function EntranceY({
     <motion.div
       variants={variants[direction]}
       initial="initial"
-      animate="animate"
-      exit="exit"
+      animate={showInView ? false : { y: 0, opacity: 1 }}
+      whileInView={showInView ? { y: 0, opacity: 1 } : undefined}
+      viewport={{
+        once: true,
+        amount: "some"
+      }}
       transition={{
         duration: duration,
         delay: delay,
-        ease: "easeOut"
+        ease: "easeInOut"
       }}
     >
       {children}
