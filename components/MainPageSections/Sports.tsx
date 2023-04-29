@@ -1,28 +1,28 @@
-import { Inter, Playfair_Display } from "next/font/google"
-import Image from "next/image"
+import { Inter, Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] })
-const playfair = Playfair_Display({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
-import EntranceClipPath from "../MotionWrappers/EntranceClipPath"
-import EntranceOpacity from "../MotionWrappers/EntranceOpacity"
+import EntranceClipPath from "../MotionWrappers/EntranceClipPath";
+import EntranceOpacity from "../MotionWrappers/EntranceOpacity";
 
 export default function Sports() {
   return (
     <>
       {/* encabezado */}
-      <header className="w-full flex flex-row items-end justify-between dark:text-gray-100 pt-8 pb-2">
+      <header className="flex w-full flex-row items-end justify-between pb-2 pt-8 dark:text-gray-100">
         <EntranceClipPath
           direction="right"
           showInView={true}
           delay={0.1}
           duration={0.7}
-          className="w-full flex flex-row items-end justify-end"
+          className="flex w-full flex-row items-end justify-end"
         >
           <h2
             className={
               playfair.className +
-              " text-5xl md:text-7xl leading-tight h-fit font-medium -skew-x-12 pr-8"
+              " h-fit -skew-x-12 pr-8 text-5xl font-medium leading-tight md:text-7xl"
             }
           >
             Deportes
@@ -38,16 +38,16 @@ export default function Sports() {
         duration={0.7}
         className="w-full"
       >
-        <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
+        <div className="my-2 h-px w-full bg-black dark:bg-gray-300/75" />
       </EntranceClipPath>
 
       {/* trending/lastest news */}
-      <section className="w-full flex flex-col md:flex-row gap-8 items-start justify-around dark:text-gray-100 py-16">
-        <div className="basis-7/12 flex flex-col justify-around gap-8">
+      <section className="flex w-full flex-col items-start justify-around gap-8 py-16 dark:text-gray-100 md:flex-row">
+        <div className="flex basis-7/12 flex-col justify-around gap-8">
           <div className="flex flex-col-reverse justify-start gap-4">
             <div className="aspect-video">
               <Image
-                className="object-cover object-center z-0"
+                className="z-0 object-cover object-center"
                 src="/f12023leclerc.webp"
                 alt="placeholder"
                 width={1920}
@@ -70,7 +70,7 @@ export default function Sports() {
           <div className="flex flex-col-reverse justify-start gap-4">
             <div className="aspect-video">
               <Image
-                className="object-cover object-center z-0"
+                className="z-0 object-cover object-center"
                 src="/enzochelsea.png"
                 alt="placeholder"
                 width={1920}
@@ -92,11 +92,11 @@ export default function Sports() {
           </div>
         </div>
 
-        <div className="basis-5/12 flex flex-col gap-8 justify-around">
+        <div className="flex basis-5/12 flex-col justify-around gap-8">
           <div className="flex flex-col justify-start">
             <div className="aspect-square">
               <Image
-                className="object-cover object-center z-0"
+                className="z-0 object-cover object-center"
                 src="/garnacho.png"
                 alt="placeholder"
                 width={1920}
@@ -119,7 +119,7 @@ export default function Sports() {
           <div className="flex flex-col justify-start">
             <div className="aspect-square">
               <Image
-                className="object-cover object-center z-0"
+                className="z-0 object-cover object-center"
                 src="/dibu.png"
                 alt="placeholder"
                 width={1920}
@@ -142,7 +142,7 @@ export default function Sports() {
           <div className="flex flex-col justify-start">
             <div className="aspect-square">
               <Image
-                className="object-cover object-center z-0"
+                className="z-0 object-cover object-center"
                 src="/sub20.png"
                 alt="placeholder"
                 width={1920}
@@ -165,17 +165,13 @@ export default function Sports() {
       </section>
 
       {/* Pill button */}
-      <div className="w-full flex flex-row items-center justify-center py-8 dark:text-gray-100">
-        <EntranceOpacity
-          delay={0.3}
-          duration={1}
-          showInView={true}
-        >
-          <button className="px-4 py-2 border rounded-full border-black dark:border-gray-300">
+      <div className="flex w-full flex-row items-center justify-center py-8 dark:text-gray-100">
+        <EntranceOpacity delay={0.3} duration={1} showInView={true}>
+          <button className="rounded-full border border-black px-4 py-2 dark:border-gray-300">
             <h4 className="text-sm font-medium">Ver mas acerca de deportes</h4>
           </button>
         </EntranceOpacity>
       </div>
     </>
-  )
+  );
 }

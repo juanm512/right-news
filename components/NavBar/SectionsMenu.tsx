@@ -1,15 +1,15 @@
-import Link from "next/link"
+import Link from "next/link";
 // import EntranceScale from "../MotionWrappers/EntranceScale"
 
 export default function SectionsMenu() {
   return (
-    <div className="flex basis-full flex-row justify-between items-center dark:text-gray-100 py-1">
+    <div className="flex basis-full flex-row items-center justify-between py-1 dark:text-gray-100">
       {/* menu opener */}
       {/* <EntranceScale> */}
-      <button className="w-full md:w-fit flex flex-row gap-1 items-center justify-center md:justify-start animate-[scaleOpacity_1s_0.05s_ease-in-out]">
+      <button className="flex w-full animate-[scaleOpacity_1s_0.05s_ease-in-out] flex-row items-center justify-center gap-1 md:w-fit md:justify-start">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 inline-flex"
+          className="inline-flex h-6 w-6"
           width={24}
           height={24}
           viewBox="0 0 24 24"
@@ -19,30 +19,26 @@ export default function SectionsMenu() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path
-            stroke="none"
-            d="M0 0h24v24H0z"
-            fill="none"
-          ></path>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M4 6l16 0"></path>
           <path d="M4 12l16 0"></path>
           <path d="M4 18l16 0"></path>
         </svg>
-        <span className="hidden md:inline-flex font-normal text-sm">
+        <span className="hidden text-sm font-normal md:inline-flex">
           Más secciones
         </span>
-        <span className="md:hidden inline-flex font-normal text-base">
+        <span className="inline-flex text-base font-normal md:hidden">
           Mostrar todas las secciones
         </span>
       </button>
       {/* </EntranceScale> */}
 
       {/* sections */}
-      <div className="basis-10/12 hidden md:flex flex-row items-center justify-around gap-4">
+      <div className="hidden basis-10/12 flex-row items-center justify-around gap-4 md:flex">
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
-          className="text-base font-medium animate-[scaleOpacity_1.1s_0.075s_ease-in-out]"
+          className="animate-[scaleOpacity_1.1s_0.075s_ease-in-out] text-base font-medium"
         >
           Noticias
         </Link>
@@ -50,7 +46,7 @@ export default function SectionsMenu() {
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
-          className="text-base font-medium animate-[scaleOpacity_1.2s_0.1s_ease-in-out]"
+          className="animate-[scaleOpacity_1.2s_0.1s_ease-in-out] text-base font-medium"
         >
           Opiniones
         </Link>
@@ -58,7 +54,7 @@ export default function SectionsMenu() {
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
-          className="text-base font-medium animate-[scaleOpacity_1.3s_0.125s_ease-in-out]"
+          className="animate-[scaleOpacity_1.3s_0.125s_ease-in-out] text-base font-medium"
         >
           Deportes
         </Link>
@@ -66,7 +62,7 @@ export default function SectionsMenu() {
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
-          className="text-base font-medium animate-[scaleOpacity_1.4s_0.15s_ease-in-out]"
+          className="animate-[scaleOpacity_1.4s_0.15s_ease-in-out] text-base font-medium"
         >
           Economía
         </Link>
@@ -74,7 +70,7 @@ export default function SectionsMenu() {
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"
-          className="text-base font-medium animate-[scaleOpacity_1.5s_0.175s_ease-in-out]"
+          className="animate-[scaleOpacity_1.5s_0.175s_ease-in-out] text-base font-medium"
         >
           Internacional
         </Link>
@@ -112,5 +108,5 @@ export default function SectionsMenu() {
         </svg>
       </div> */}
     </div>
-  )
+  );
 }

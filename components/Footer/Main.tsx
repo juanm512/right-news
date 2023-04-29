@@ -1,12 +1,12 @@
-import Image from "next/image"
+import Image from "next/image";
 
-import EntranceClipPath from "../MotionWrappers/EntranceClipPath"
-import Link from "next/link"
-import EntranceOpacity from "../MotionWrappers/EntranceOpacity"
+import EntranceClipPath from "../MotionWrappers/EntranceClipPath";
+import Link from "next/link";
+import EntranceOpacity from "../MotionWrappers/EntranceOpacity";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between flex-wrap py-4">
+    <footer className="flex flex-wrap items-center justify-between py-4">
       {/* Barra de separacion */}
       <EntranceClipPath
         direction="right"
@@ -15,9 +15,9 @@ export default function Footer() {
         className="w-full"
         showInView={true}
       >
-        <div className="w-full h-px bg-black dark:bg-gray-300 mt-2 animate-[clipPathRight_2.1s_ease-out]" />
+        <div className="mt-2 h-px w-full animate-[clipPathRight_2.1s_ease-out] bg-black dark:bg-gray-300" />
       </EntranceClipPath>
-      <div className="container px-6 py-12 mx-auto">
+      <div className="container mx-auto px-6 py-12">
         <EntranceClipPath
           direction="right"
           delay={0.2}
@@ -25,15 +25,15 @@ export default function Footer() {
           className="w-full"
           showInView={true}
         >
-          <div className="md:flex md:-mx-3 md:items-center md:justify-evenly">
-            <h1 className="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl dark:text-white">
+          <div className="md:-mx-3 md:flex md:items-center md:justify-evenly">
+            <h1 className="text-xl font-semibold tracking-tight text-gray-800 dark:text-white md:mx-3 xl:text-2xl">
               Suscríbete a nuestro newsletter para recibir las últimas noticias
             </h1>
 
-            <div className="mt-6 md:mx-1 shrink-0 md:mt-0 md:w-auto">
+            <div className="mt-6 shrink-0 md:mx-1 md:mt-0 md:w-auto">
               <Link
                 href="/newsletter"
-                className="group inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-neutral-700 rounded-full gap-x-3 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+                className="group inline-flex w-full items-center justify-center gap-x-3 rounded-full bg-neutral-700 px-4 py-2 text-sm text-white duration-300 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
               >
                 <span>Suscribirme ahora</span>
 
@@ -43,7 +43,7 @@ export default function Footer() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 transition-all duration-300 group-hover:translate-x-1"
+                  className="h-5 w-5 transition-all duration-300 group-hover:translate-x-1"
                 >
                   <path
                     strokeLinecap="round"
@@ -55,124 +55,108 @@ export default function Footer() {
             </div>
           </div>
         </EntranceClipPath>
-        <hr className="my-6 border-neutral-200 md:my-10 dark:border-neutral-700" />
+        <hr className="my-6 border-neutral-200 dark:border-neutral-700 md:my-10" />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <EntranceOpacity
-            showInView={true}
-            duration={1}
-            delay={0.4}
-          >
+          <EntranceOpacity showInView={true} duration={1} delay={0.4}>
             <p className="font-semibold text-gray-800 dark:text-white">
               Quick Link
             </p>
 
-            <div className="flex flex-col items-start mt-5 space-y-2">
+            <div className="mt-5 flex flex-col items-start space-y-2">
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Home
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Who We Are
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Our Philosophy
               </a>
             </div>
           </EntranceOpacity>
-          <EntranceOpacity
-            showInView={true}
-            duration={1}
-            delay={0.5}
-          >
+          <EntranceOpacity showInView={true} duration={1} delay={0.5}>
             <p className="font-semibold text-gray-800 dark:text-white">
               Industries
             </p>
 
-            <div className="flex flex-col items-start mt-5 space-y-2">
+            <div className="mt-5 flex flex-col items-start space-y-2">
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Retail & E-Commerce
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Information Technology
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Finance & Insurance
               </a>
             </div>
           </EntranceOpacity>
-          <EntranceOpacity
-            showInView={true}
-            duration={1}
-            delay={0.6}
-          >
+          <EntranceOpacity showInView={true} duration={1} delay={0.6}>
             <p className="font-semibold text-gray-800 dark:text-white">
               Services
             </p>
 
-            <div className="flex flex-col items-start mt-5 space-y-2">
+            <div className="mt-5 flex flex-col items-start space-y-2">
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Translation
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Proofreading & Editing
               </a>
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Content Creation
               </a>
             </div>
           </EntranceOpacity>
-          <EntranceOpacity
-            showInView={true}
-            duration={1}
-            delay={0.7}
-          >
+          <EntranceOpacity showInView={true} duration={1} delay={0.7}>
             <p className="font-semibold text-gray-800 dark:text-white">
               Contact Us
             </p>
 
-            <div className="flex flex-col items-start mt-5 space-y-2">
+            <div className="mt-5 flex flex-col items-start space-y-2">
               <a
                 href="#"
-                className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 +880 768 473 4978
               </a>
               <Link
                 href="mailto:redaccion@derechadiario.com"
                 target="_blank"
-                className="group text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="group text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Redaccion
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline-block ml-1 text-gray-500 dark:text-gray-400 transition-all duration-300 group-hover:ml-2"
+                  className="ml-1 inline-block h-5 w-5 text-gray-500 transition-all duration-300 group-hover:ml-2 dark:text-gray-400"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -182,11 +166,7 @@ export default function Footer() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path>
                   <path d="M3 6l9 6l9 -6"></path>
                   <path d="M15 18h6"></path>
@@ -196,12 +176,12 @@ export default function Footer() {
               <Link
                 href="mailto:info@derechadiario.com"
                 target="_blank"
-                className="group text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-neutral-400 hover:underline hover:text-neutral-500/80"
+                className="group text-gray-600 transition-colors duration-300 hover:text-neutral-500/80 hover:underline dark:text-gray-300 dark:hover:text-neutral-400"
               >
                 Publicidad e Informacion
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline-block ml-1 text-gray-500 dark:text-gray-400 transition-all duration-300 group-hover:ml-2"
+                  className="ml-1 inline-block h-5 w-5 text-gray-500 transition-all duration-300 group-hover:ml-2 dark:text-gray-400"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -211,11 +191,7 @@ export default function Footer() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path>
                   <path d="M3 6l9 6l9 -6"></path>
                   <path d="M15 18h6"></path>
@@ -226,28 +202,20 @@ export default function Footer() {
           </EntranceOpacity>
         </div>
 
-        <hr className="my-6 border-neutral-200 md:my-10 dark:border-neutral-700" />
+        <hr className="my-6 border-neutral-200 dark:border-neutral-700 md:my-10" />
 
-        <div className="flex flex-col gap-4 items-center justify-between sm:flex-row">
-          <EntranceOpacity
-            duration={1}
-            delay={0.5}
-            showInView={true}
-          >
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <EntranceOpacity duration={1} delay={0.5} showInView={true}>
             <Image
               src="/Logo-La-Derecha-Diario.png"
               alt="Logo La Derecha Diario"
               width={500}
               height={100}
-              className="max-w-[200px] h-fit object-contain dark:invert object-center brightness-[0.1] drop-shadow-sm"
+              className="h-fit max-w-[200px] object-contain object-center brightness-[0.1] drop-shadow-sm dark:invert"
               style={{ imageRendering: "auto" }}
             />
           </EntranceOpacity>
-          <EntranceOpacity
-            duration={1}
-            delay={0.7}
-            showInView={true}
-          >
+          <EntranceOpacity duration={1} delay={0.7} showInView={true}>
             <ul className="flex flex-row justify-center gap-6 sm:justify-end">
               <li>
                 <a
@@ -270,11 +238,7 @@ export default function Footer() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    ></path>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
                   </svg>
                 </a>
@@ -342,11 +306,7 @@ export default function Footer() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    ></path>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
                     <path d="M10 9l5 3l-5 3z"></path>
                   </svg>
@@ -372,11 +332,7 @@ export default function Footer() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    ></path>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
                     <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527"></path>
                     <path d="M9 15c1.5 -1 4 -1 5 .5"></path>
@@ -386,17 +342,13 @@ export default function Footer() {
               </li>
             </ul>
           </EntranceOpacity>
-          <EntranceOpacity
-            duration={1}
-            delay={0.9}
-            showInView={true}
-          >
-            <p className="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">
+          <EntranceOpacity duration={1} delay={0.9} showInView={true}>
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-300 sm:mt-0">
               Copyright © 2023. La Derecha Diario
             </p>
           </EntranceOpacity>
         </div>
       </div>
     </footer>
-  )
+  );
 }

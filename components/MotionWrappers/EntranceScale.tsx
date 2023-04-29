@@ -1,24 +1,24 @@
-"use client"
-import { m as motion } from "framer-motion"
+"use client";
+import { m as motion } from "framer-motion";
 
-import useHasMounted from "@/utils/hooks/useHasMounted"
+import useHasMounted from "@/utils/hooks/useHasMounted";
 
 type EntranceScaleProps = {
-  children: React.ReactNode
-  duration?: number
-  delay?: number
-  className?: string
-}
+  children: React.ReactNode;
+  duration?: number;
+  delay?: number;
+  className?: string;
+};
 
 export default function EntranceScale({
   children,
   duration = 0.75,
   delay = 0,
-  className
+  className,
 }: EntranceScaleProps) {
-  const hasMounted = useHasMounted()
+  const hasMounted = useHasMounted();
   if (!hasMounted) {
-    return <div className="opacity-0">{children}</div>
+    return <div className="opacity-0">{children}</div>;
   }
   return (
     <motion.div
@@ -29,5 +29,5 @@ export default function EntranceScale({
     >
       {children}
     </motion.div>
-  )
+  );
 }

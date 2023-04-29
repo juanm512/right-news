@@ -1,40 +1,40 @@
-"use client"
-import { m as motion } from "framer-motion"
-import useHasMounted from "@/utils/hooks/useHasMounted"
+"use client";
+import { m as motion } from "framer-motion";
+import useHasMounted from "@/utils/hooks/useHasMounted";
 
 type EntranceYProps = {
-  children: React.ReactNode
-  direction?: "up" | "down"
-  duration?: number
-  delay?: number
-  showInView?: boolean
-}
+  children: React.ReactNode;
+  direction?: "up" | "down";
+  duration?: number;
+  delay?: number;
+  showInView?: boolean;
+};
 
 const variants = {
   up: {
     initial: {
       y: 100,
-      opacity: 0
-    }
+      opacity: 0,
+    },
   },
   down: {
     initial: {
       y: -100,
-      opacity: 0
-    }
-  }
-}
+      opacity: 0,
+    },
+  },
+};
 
 export default function EntranceY({
   children,
   direction = "down",
   duration = 0.5,
   delay = 0,
-  showInView = false
+  showInView = false,
 }: EntranceYProps) {
-  const hasMounted = useHasMounted()
+  const hasMounted = useHasMounted();
   if (!hasMounted) {
-    return <div className="opacity-0">{children}</div>
+    return <div className="opacity-0">{children}</div>;
   }
 
   return (
@@ -45,15 +45,15 @@ export default function EntranceY({
       whileInView={showInView ? { y: 0, opacity: 1 } : undefined}
       viewport={{
         once: true,
-        amount: "some"
+        amount: "some",
       }}
       transition={{
         duration: duration,
         delay: delay,
-        ease: "easeInOut"
+        ease: "easeInOut",
       }}
     >
       {children}
     </motion.div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { ThemeProvider } from "next-themes"
-import { LazyMotion, MotionConfig, domAnimation } from "framer-motion"
+import { ThemeProvider } from "next-themes";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -15,5 +15,5 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       <LazyMotion features={domAnimation}>{children}</LazyMotion>
       {/* </MotionConfig> */}
     </ThemeProvider>
-  )
+  );
 }

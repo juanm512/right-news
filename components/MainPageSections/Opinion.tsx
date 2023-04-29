@@ -1,28 +1,28 @@
-import { Inter, Playfair_Display } from "next/font/google"
-import Image from "next/image"
+import { Inter, Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] })
-const playfair = Playfair_Display({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
-import EntranceClipPath from "../MotionWrappers/EntranceClipPath"
-import EntranceOpacity from "../MotionWrappers/EntranceOpacity"
+import EntranceClipPath from "../MotionWrappers/EntranceClipPath";
+import EntranceOpacity from "../MotionWrappers/EntranceOpacity";
 
 export default function Opinion() {
   return (
     <>
       {/* encabezado */}
-      <header className="w-full flex flex-row items-end justify-between dark:text-gray-100 pt-8 pb-2">
+      <header className="flex w-full flex-row items-end justify-between pb-2 pt-8 dark:text-gray-100">
         <EntranceClipPath
           direction="right"
           showInView={true}
           delay={0.2}
           duration={1.1}
-          className="w-full flex flex-row items-end justify-start"
+          className="flex w-full flex-row items-end justify-start"
         >
           <h2
             className={
               playfair.className +
-              " text-5xl md:text-7xl leading-tight h-fit font-medium -skew-x-12"
+              " h-fit -skew-x-12 text-5xl font-medium leading-tight md:text-7xl"
             }
           >
             Opiniones
@@ -38,21 +38,21 @@ export default function Opinion() {
         duration={1.1}
         className="w-full"
       >
-        <div className="w-full h-px bg-black dark:bg-gray-300/75 my-2" />
+        <div className="my-2 h-px w-full bg-black dark:bg-gray-300/75" />
       </EntranceClipPath>
 
       {/* trending/lastest news */}
-      <section className="w-full flex flex-col md:flex-row-reverse gap-8 items-start justify-between dark:text-gray-100 py-16">
+      <section className="flex w-full flex-col items-start justify-between gap-8 py-16 dark:text-gray-100 md:flex-row-reverse">
         <EntranceClipPath
           direction="downLeft"
           showInView={true}
           delay={0.7}
           duration={1}
-          className="basis-1/4 flex flex-col justify-start"
+          className="flex basis-1/4 flex-col justify-start"
         >
-          <div className="aspect-w-9 aspect-h-12">
+          <div className="aspect-h-12 aspect-w-9">
             <Image
-              className="object-cover object-center z-0"
+              className="z-0 object-cover object-center"
               src="/op1.jpg"
               alt="placeholder"
               width={1920}
@@ -77,11 +77,11 @@ export default function Opinion() {
           showInView={true}
           delay={0.7}
           duration={1}
-          className="basis-1/2 flex flex-col-reverse justify-start gap-2"
+          className="flex basis-1/2 flex-col-reverse justify-start gap-2"
         >
-          <div className="aspect-w-12 aspect-h-9">
+          <div className="aspect-h-9 aspect-w-12">
             <Image
-              className="object-cover object-center z-0"
+              className="z-0 object-cover object-center"
               src="/op2.jpg"
               alt="placeholder"
               width={1920}
@@ -107,11 +107,11 @@ export default function Opinion() {
           showInView={true}
           delay={0.7}
           duration={1}
-          className="basis-1/4 flex flex-col justify-start gap-4"
+          className="flex basis-1/4 flex-col justify-start gap-4"
         >
-          <div className="aspect-w-9 aspect-h-12">
+          <div className="aspect-h-12 aspect-w-9">
             <Image
-              className="object-cover object-center z-0"
+              className="z-0 object-cover object-center"
               src="/op3.jpg"
               alt="placeholder"
               width={1920}
@@ -133,17 +133,13 @@ export default function Opinion() {
       </section>
 
       {/* Pill button */}
-      <div className="w-full flex flex-row items-center justify-center py-8 dark:text-gray-100">
-        <EntranceOpacity
-          delay={0.3}
-          duration={1}
-          showInView={true}
-        >
-          <button className="px-4 py-2 border rounded-full border-black dark:border-gray-300">
+      <div className="flex w-full flex-row items-center justify-center py-8 dark:text-gray-100">
+        <EntranceOpacity delay={0.3} duration={1} showInView={true}>
+          <button className="rounded-full border border-black px-4 py-2 dark:border-gray-300">
             <h4 className="text-sm font-medium">Ver mas opiniones</h4>
           </button>
         </EntranceOpacity>
       </div>
     </>
-  )
+  );
 }

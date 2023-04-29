@@ -1,15 +1,15 @@
-"use client"
-import React from "react"
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
-import { useScroll } from "framer-motion"
-import { useTheme } from "next-themes"
+"use client";
+import React from "react";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { useScroll } from "framer-motion";
+import { useTheme } from "next-themes";
 
 export default function SettingsButton() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   // const [reduceMotion, setReduceMotion] = React.useState(false)
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const { scrollY }: any = useScroll()
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { scrollY }: any = useScroll();
 
   return (
     <DropdownMenu.Root
@@ -18,18 +18,18 @@ export default function SettingsButton() {
       onOpenChange={() => {
         function updateHidden() {
           if (scrollY.current != scrollY.prev) {
-            setIsMenuOpen(false)
+            setIsMenuOpen(false);
           }
         }
-        const unsubX = scrollY.on("change", updateHidden)
+        const unsubX = scrollY.on("change", updateHidden);
         return () => {
-          unsubX()
-        }
+          unsubX();
+        };
       }}
     >
       <DropdownMenu.Trigger asChild>
         <button
-          className={`p-1 rounded-full hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-transform duration-500 delay-100 ${
+          className={`rounded-full p-1 transition-transform duration-500 delay-100 hover:bg-neutral-300 dark:hover:bg-neutral-800 ${
             isMenuOpen ? "rotate-180" : ""
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -47,11 +47,7 @@ export default function SettingsButton() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path
-              stroke="none"
-              d="M0 0h24v24H0z"
-              fill="none"
-            ></path>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
             <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
           </svg>
@@ -59,17 +55,17 @@ export default function SettingsButton() {
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="z-10 min-w-[220px] bg-neutral-100 dark:bg-neutral-800 dark:text-white rounded-md p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=left]:animate-[xLeftOpacity_0.3s_ease-out]"
+          className="z-10 min-w-[220px] rounded-md bg-neutral-100 p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=left]:animate-[xLeftOpacity_0.3s_ease-out] dark:bg-neutral-800 dark:text-white"
           sideOffset={5}
           side="left"
           hideWhenDetached={true}
         >
-          <DropdownMenu.Item className="group text-[13px] cursor-pointer leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
+          <DropdownMenu.Item className="text-violet11 data-[disabled]:text-mauve8 data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1 group relative flex h-[25px] cursor-pointer select-none items-center rounded-[3px] px-[5px] pl-[25px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none">
             Configurar Clima
-            <div className="ml-auto pl-[20px] text-mauve11 group-data-[highlighted]:text-white group-data-[disabled]:text-mauve8">
+            <div className="text-mauve11 group-data-[disabled]:text-mauve8 ml-auto pl-[20px] group-data-[highlighted]:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
+                className="h-5 w-5"
                 width={24}
                 height={24}
                 viewBox="0 0 24 24"
@@ -79,17 +75,13 @@ export default function SettingsButton() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                ></path>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M10 18l6 -6l-6 -6v12"></path>
               </svg>
             </div>
           </DropdownMenu.Item>
 
-          <DropdownMenu.Separator className="h-[1px] bg-black m-[5px] dark:bg-white" />
+          <DropdownMenu.Separator className="m-[5px] h-[1px] bg-black dark:bg-white" />
 
           {/* <DropdownMenu.CheckboxItem
             className="group text-[13px] cursor-pointer leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
@@ -117,21 +109,18 @@ export default function SettingsButton() {
 
           <DropdownMenu.Separator className="h-[1px] bg-black m-[5px] dark:bg-white" /> */}
 
-          <DropdownMenu.Label className="pl-[25px] text-xs leading-[25px] italic">
+          <DropdownMenu.Label className="pl-[25px] text-xs italic leading-[25px]">
             Tema
           </DropdownMenu.Label>
-          <DropdownMenu.RadioGroup
-            value={theme}
-            onValueChange={setTheme}
-          >
+          <DropdownMenu.RadioGroup value={theme} onValueChange={setTheme}>
             <DropdownMenu.RadioItem
-              className="text-[13px] cursor-pointer leading-none rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
+              className="data-[disabled]:text-mauve8 data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1 relative flex h-[25px] cursor-pointer select-none items-center rounded-[3px] px-[5px] pl-[25px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none"
               value="dark"
             >
-              <DropdownMenu.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
+              <DropdownMenu.ItemIndicator className="absolute left-0 inline-flex w-[25px] items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -141,11 +130,7 @@ export default function SettingsButton() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path
                     d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
                     strokeWidth={0}
@@ -154,10 +139,10 @@ export default function SettingsButton() {
                 </svg>
               </DropdownMenu.ItemIndicator>
               Modo Oscuro
-              <div className="ml-auto pl-[20px] text-mauve11 group-data-[highlighted]:text-white group-data-[disabled]:text-mauve8">
+              <div className="text-mauve11 group-data-[disabled]:text-mauve8 ml-auto pl-[20px] group-data-[highlighted]:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -167,23 +152,19 @@ export default function SettingsButton() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
                 </svg>
               </div>
             </DropdownMenu.RadioItem>
             <DropdownMenu.RadioItem
-              className="text-[13px] cursor-pointer leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
+              className="text-violet11 data-[disabled]:text-mauve8 data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1 relative flex h-[25px] cursor-pointer select-none items-center rounded-[3px] px-[5px] pl-[25px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none"
               value="light"
             >
-              <DropdownMenu.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
+              <DropdownMenu.ItemIndicator className="absolute left-0 inline-flex w-[25px] items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -193,11 +174,7 @@ export default function SettingsButton() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path
                     d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
                     strokeWidth={0}
@@ -206,10 +183,10 @@ export default function SettingsButton() {
                 </svg>
               </DropdownMenu.ItemIndicator>
               Modo Claro
-              <div className="ml-auto pl-[20px] text-mauve11 group-data-[highlighted]:text-white group-data-[disabled]:text-mauve8">
+              <div className="text-mauve11 group-data-[disabled]:text-mauve8 ml-auto pl-[20px] group-data-[highlighted]:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                   width={24}
                   height={24}
                   viewBox="0 0 24 24"
@@ -219,16 +196,8 @@ export default function SettingsButton() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path
-                    stroke="none"
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  ></path>
-                  <circle
-                    cx={12}
-                    cy={12}
-                    r={5}
-                  />
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <circle cx={12} cy={12} r={5} />
                   <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
                 </svg>
               </div>
@@ -238,5 +207,5 @@ export default function SettingsButton() {
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
-  )
+  );
 }
