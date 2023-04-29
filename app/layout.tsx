@@ -38,7 +38,12 @@ export default function RootLayout({
           href="/Logo-Simple-LDD.png"
         />
       </head>
-      <body className={inter.className + " px-8 mt-72"}>
+      <body
+        className={
+          inter.className +
+          " max-w-screen-sm px-0 mt-96 md:max-w-screen-xl md:mx-auto md:px-8 md:mt-72"
+        }
+      >
         <Providers>
           <ThemeBG />
           <Nav>

@@ -17,14 +17,14 @@ export default function MainNavBar() {
   return (
     <div className="flex basis-full flex-row gap-2 justify-between dark:text-gray-100 py-4">
       {/* donaciones */}
-      <div className="basis-3/12 flex flex-col gap-4 items-start justify-between">
+      <div className="hidden basis-3/12 md:flex flex-col gap-4 items-start justify-between">
         <NavHiddenOnScroll hiddenClass={["hidden", "block"]}>
           {/* <EntranceOpacity delay={0.75}> */}
           <div className="flex flex-col items-start gap-2 animate-[clipPathDown_1s_0.1s_ease-out]">
             <p className={playfair.className + " text-lg font-medium"}>
               Apoyanos con una donación
             </p>
-            <p className="text-sm italic font-normal opacity-50">
+            <p className="text-sm italic font-normal opacity-[0.6]">
               Independientes, sin censura, sin pauta del estado
             </p>
           </div>
@@ -82,15 +82,12 @@ export default function MainNavBar() {
             alt="Logo La Derecha Diario"
             width={1606}
             height={310}
-            className="max-w-md h-full object-contain dark:invert object-center brightness-[0.2] drop-shadow-sm"
+            className="max-w-xs md:max-w-md h-full object-contain dark:invert object-center brightness-[0.2] drop-shadow-sm"
             style={{ imageRendering: "auto" }}
           />
         </NavHiddenOnScroll>
         {/* </EntranceClipPath> */}
-        <NavHiddenOnScroll
-          hiddenClass={["hidden", "block"]}
-          className=" flex w-96 justify-end py-2"
-        >
+        <NavHiddenOnScroll hiddenClass={["hidden", "block"]}>
           {/* <EntranceScale delay={0.75}> */}
           <NewspaperEdition />
           {/* </EntranceScale> */}

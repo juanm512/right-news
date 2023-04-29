@@ -1,5 +1,5 @@
 import Link from "next/link"
-import EntranceY from "../MotionWrappers/EntranceY"
+// import EntranceY from "../MotionWrappers/EntranceY"
 
 export default function DayInformation() {
   const date1 = new Date()
@@ -31,7 +31,7 @@ export default function DayInformation() {
       {/* </EntranceY> */}
 
       {/* Clima */}
-      <div className="flex flex-row items-center gap-4 text-xs">
+      <div className="flex flex-row items-center gap-2 md:gap-4 text-xs">
         {/* link a mas detalles del clima en: ciudad guardada */}
         {/* <EntranceY
           direction="down"
@@ -41,7 +41,7 @@ export default function DayInformation() {
         <Link
           target="_blank"
           href="https://www.google.com/search?q=clima+ciudad+guardada"
-          className="flex flex-row items-center justify-between font-light animate-[yUpOpacity_1s_0.05s_ease-out]"
+          className="hidden md:flex flex-row items-center justify-between font-light animate-[yUpOpacity_1s_0.05s_ease-out]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,10 @@ export default function DayInformation() {
           delay={2}
         > */}
         <p className="flex flex-row items-center justify-between font-normal animate-[yUpOpacity_2.5s_0.125s_ease-out]">
-          Ciudad Guardada, <span className="opacity-50 ml-1">Provincia</span>
+          Ciudad Guardada
+          <span className="hidden opacity-[0.6] ml-1 md:inline-flex">
+            , Provincia
+          </span>
         </p>
         {/* </EntranceY> */}
       </div>

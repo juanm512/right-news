@@ -11,35 +11,8 @@ export default function PrincipalNews() {
   return (
     <>
       {/* encabezado */}
-      <header className="basis-full flex flex-row items-end dark:text-gray-100">
-        <div className="basis-6/12 flex flex-row gap-4 items-center justify-start text">
-          <EntranceScale
-            delay={2.5}
-            duration={0.5}
-          >
-            <h4 className="opacity-full">
-              {/* animate-[clipPathRight_1s_0.1s_ease-out] */}
-              Destacados
-            </h4>
-          </EntranceScale>
-          <EntranceScale
-            delay={2.5}
-            duration={0.5}
-          >
-            {/*  animate-[opacity_1s_0.1s_ease-out] */}
-            <div className="w-px h-6 bg-black dark:bg-gray-300/75 mx-2" />
-          </EntranceScale>
-          <EntranceScale
-            delay={2.5}
-            duration={0.5}
-          >
-            <h4 className="opacity-50">
-              {/*  animate-[clipPathRight_1s_0.1s_ease-out] */}
-              Ultimos
-            </h4>
-          </EntranceScale>
-        </div>
-        <div className="basis-6/12 flex flex-row items-end justify-center">
+      <header className="w-full flex flex-row items-end dark:text-gray-100">
+        <div className="w-full flex flex-row items-end justify-center md:justify-end">
           {/* animate-[clipPathRight_1s_0.1s_ease-out] */}
           <h2
             className={playfair.className + " text-7xl font-medium -skew-x-12"}
@@ -61,7 +34,7 @@ export default function PrincipalNews() {
       </EntranceClipPath>
 
       {/* main new */}
-      <section className="basis-full flex flex-col items-start justify-between dark:text-gray-100 py-12">
+      <section className="w-full flex flex-col items-start justify-between dark:text-gray-100 py-12">
         <EntranceClipPath
           direction="upRight"
           delay={1.5}
@@ -100,15 +73,15 @@ export default function PrincipalNews() {
             {/* tags */}
             <div className="w-full flex flex-row items-center justify-between py-2">
               <div className="flex flex-row items-center justify-start gap-4">
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Economia
-                </h4>
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                </h6>
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Dolar
-                </h4>
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                </h6>
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Urgente
-                </h4>
+                </h6>
               </div>
               <div className="flex flex-row items-center justify-end">
                 <svg
@@ -140,9 +113,9 @@ export default function PrincipalNews() {
             {/* Title */}
             <div className="w-full flex flex-row items-center justify-between py-2">
               <div className="basis-9/12 flex flex-row items-center justify-start gap-4">
-                <h4 className={playfair.className + " text-5xl font-bold"}>
+                <h5 className={playfair.className + " text-5xl font-bold"}>
                   El dolar se dispara a 475$ en el comienzo de la semana
-                </h4>
+                </h5>
               </div>
               <div className="basis-3/12 flex flex-row items-center justify-end">
                 <div className="px-6 py-2 text-neutral-300 bg-neutral-800 dark:text-neutral-800 dark:bg-neutral-300 rounded-full">
@@ -171,9 +144,9 @@ export default function PrincipalNews() {
             </div>
             <div className="w-full flex flex-row items-center justify-between py-2">
               <div className="basis-full flex flex-row items-center justify-start gap-2">
-                <h4 className="text-sm font-medium">Por: Juan Perez</h4>
+                <h6 className="text-sm font-medium">Por: Juan Perez</h6>
                 <div className="w-1 h-1 bg-black dark:bg-gray-300/75 mx-2 rounded-full" />
-                <h4 className="text-sm font-medium">Hace 2 horas</h4>
+                <h6 className="text-sm font-medium">Hace 2 horas</h6>
               </div>
             </div>
           </div>
@@ -181,7 +154,7 @@ export default function PrincipalNews() {
       </section>
 
       {/* trending/lastest news */}
-      <section className="basis-full flex flex-row gap-8 items-start justify-between dark:text-gray-100 py-16">
+      <section className="w-full flex flex-col md:flex-row gap-8 items-start justify-between dark:text-gray-100 py-16">
         <div className="basis-1/2 flex flex-col justify-start">
           <Image
             className="h-fit w-full object-contain object-center z-0"
@@ -192,31 +165,31 @@ export default function PrincipalNews() {
           />
 
           <div className="flex flex-row items-center text-sm justify-start gap-4 py-4">
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+            <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
               Politica
-            </h4>
-            <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+            </h6>
+            <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
               Estados Unidos
-            </h4>
+            </h6>
           </div>
 
           <div className="flex flex-row items-center justify-start py-2">
-            <h4 className={playfair.className + " text-3xl font-semibold"}>
+            <h5 className={playfair.className + " text-3xl font-semibold"}>
               Kennedy Jr: Quién es el nuevo candidato a presidente en el Partido
               Demócrata
-            </h4>
+            </h5>
           </div>
 
           <div className="flex flex-row items-center justify-between py-4">
-            <h4 className="text-sm font-medium">Hace 5 horas</h4>
-            <h4 className="text-sm font-medium">
+            <h6 className="text-sm font-medium">Hace 5 horas</h6>
+            <h6 className="text-sm font-medium">
               Por: Redaccion Internacional
-            </h4>
+            </h6>
           </div>
         </div>
 
         <div className="basis-1/2 flex flex-col justify-start gap-8">
-          <div className="basis-full flex flex-row justify-start gap-4">
+          <div className="basis-full flex flex-col md:flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
                 className="h-full w-full object-contain object-center z-0"
@@ -228,16 +201,16 @@ export default function PrincipalNews() {
             </div>
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Argentina
-                </h4>
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                </h6>
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Economia
-                </h4>
+                </h6>
               </div>
 
               <div className="basis-8/12 flex flex-row items-start justify-start py-2 text-ellipsis">
-                <h4
+                <h5
                   className={
                     playfair.className +
                     " text-2xl font-semibold max-h-32 overflow-hidden"
@@ -245,18 +218,18 @@ export default function PrincipalNews() {
                 >
                   Pérsico: “Massa me pidió que apretemos juntos a los
                   empresarios para que bajen los precios”
-                </h4>
+                </h5>
               </div>
 
               <div className="basis-2/12 flex flex-row items-center justify-between">
-                <h4 className="text-sm font-normal">Hace 23 horas</h4>
-                <h4 className="text-sm font-normal">
+                <h6 className="text-sm font-normal">Hace 23 horas</h6>
+                <h6 className="text-sm font-normal">
                   Por: Redaccion Argentiona
-                </h4>
+                </h6>
               </div>
             </div>
           </div>
-          <div className="basis-full flex flex-row justify-start gap-4">
+          <div className="basis-full flex flex-col md:flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
                 className="h-full w-full object-contain object-center z-0"
@@ -268,16 +241,16 @@ export default function PrincipalNews() {
             </div>
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Internacional
-                </h4>
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                </h6>
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Turquia
-                </h4>
+                </h6>
               </div>
 
               <div className="basis-8/12 flex flex-row items-start justify-start py-2 text-ellipsis">
-                <h4
+                <h5
                   className={
                     playfair.className +
                     " text-2xl font-semibold max-h-32 overflow-hidden"
@@ -285,18 +258,18 @@ export default function PrincipalNews() {
                 >
                   Erdogan cancela sus apariciones electorales por motivos de
                   salud
-                </h4>
+                </h5>
               </div>
 
               <div className="basis-2/12 flex flex-row items-center justify-between">
-                <h4 className="text-sm font-normal">Hace 1 día</h4>
-                <h4 className="text-sm font-normal">
+                <h6 className="text-sm font-normal">Hace 1 día</h6>
+                <h6 className="text-sm font-normal">
                   Por: Redaccion Internacional
-                </h4>
+                </h6>
               </div>
             </div>
           </div>
-          <div className="basis-full flex flex-row justify-start gap-4">
+          <div className="basis-full flex flex-col md:flex-row justify-start gap-4">
             <div className="basis-1/2 flex flex-row">
               <Image
                 className="h-full w-full object-contain object-center"
@@ -308,25 +281,25 @@ export default function PrincipalNews() {
             </div>
             <div className="basis-1/2 flex flex-col justify-between">
               <div className="basis-2/12 flex flex-row items-center text-sm justify-start gap-4">
-                <h4 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
+                <h6 className="px-3 py-1 border rounded-full border-black dark:border-gray-300">
                   Deportes
-                </h4>
+                </h6>
               </div>
 
               <div className="basis-8/12 flex flex-row items-start justify-start py-2 text-ellipsis">
-                <h4
+                <h5
                   className={
                     playfair.className +
                     " text-2xl font-semibold max-h-32 overflow-hidden"
                   }
                 >
                   Santi Maratea arranco la colecta para salvar a Independiente
-                </h4>
+                </h5>
               </div>
 
               <div className="basis-2/12 flex flex-row items-center justify-between">
-                <h4 className="text-sm font-normal">Hace 2 horas</h4>
-                <h4 className="text-sm font-normal">Por: Juan Perez</h4>
+                <h6 className="text-sm font-normal">Hace 2 horas</h6>
+                <h6 className="text-sm font-normal">Por: Juan Perez</h6>
               </div>
             </div>
           </div>
@@ -341,7 +314,7 @@ export default function PrincipalNews() {
           showInView={true}
         >
           <button className="px-4 py-2 border rounded-full border-black dark:border-gray-300">
-            <h4 className="text-sm font-medium">Ver mas noticias</h4>
+            <h6 className="text-sm font-medium">Ver mas noticias</h6>
           </button>
         </EntranceOpacity>
       </div>

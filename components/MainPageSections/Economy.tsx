@@ -20,7 +20,7 @@ export default function Economy() {
           className="w-full flex flex-row items-end justify-center"
         >
           <h2
-            className={`${playfair.className} text-7xl leading-tight h-fit font-medium -skew-x-12`}
+            className={`${playfair.className} text-5xl md:text-7xl leading-tight h-fit font-medium -skew-x-12`}
           >
             Economia
           </h2>
@@ -39,8 +39,8 @@ export default function Economy() {
       </EntranceClipPath>
 
       {/* news */}
-      <section className="basis-full flex flex-col gap-8 items-start justify-between dark:text-gray-100 py-16">
-        <div className="flex flex-row justify-around gap-8">
+      <section className="w-full flex flex-col gap-8 items-start justify-between dark:text-gray-100 py-16">
+        <div className="flex flex-col md:flex-row justify-around gap-8">
           <div className="basis-1/3 flex flex-col justify-start">
             <div className=" aspect-video">
               <Image
@@ -111,7 +111,7 @@ export default function Economy() {
           </div>
         </div>
 
-        <div className="flex flex-row-reverse justify-start gap-8">
+        <div className="flex flex-col md:flex-row-reverse justify-start gap-8">
           <div className="basis-1/2 aspect-video">
             <Image
               className="object-cover object-center z-0"
@@ -136,7 +136,7 @@ export default function Economy() {
           </div>
         </div>
 
-        <div className="flex flex-row justify-around gap-8">
+        <div className="flex flex-col md:flex-row justify-around gap-8">
           <div className="basis-1/3 flex flex-col justify-start">
             <div className=" aspect-video">
               <Image

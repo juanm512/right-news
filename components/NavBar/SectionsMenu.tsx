@@ -6,7 +6,7 @@ export default function SectionsMenu() {
     <div className="flex basis-full flex-row justify-between items-center dark:text-gray-100 py-1">
       {/* menu opener */}
       {/* <EntranceScale> */}
-      <button className="flex flex-row gap-1 items-center justify-start animate-[scaleOpacity_1s_0.05s_ease-in-out]">
+      <button className="w-full md:w-fit flex flex-row gap-1 items-center justify-center md:justify-start animate-[scaleOpacity_1s_0.05s_ease-in-out]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6 h-6 inline-flex"
@@ -28,12 +28,17 @@ export default function SectionsMenu() {
           <path d="M4 12l16 0"></path>
           <path d="M4 18l16 0"></path>
         </svg>
-        <span className="inline-flex font-normal text-sm">Más secciones</span>
+        <span className="hidden md:inline-flex font-normal text-sm">
+          Más secciones
+        </span>
+        <span className="md:hidden inline-flex font-normal text-base">
+          Mostrar todas las secciones
+        </span>
       </button>
       {/* </EntranceScale> */}
 
       {/* sections */}
-      <div className="basis-10/12 flex flex-row items-center justify-around gap-4">
+      <div className="basis-10/12 hidden md:flex flex-row items-center justify-around gap-4">
         {/* <EntranceScale> */}{" "}
         <Link
           href="/noticias"

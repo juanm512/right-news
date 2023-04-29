@@ -16,7 +16,11 @@ const inter = Inter({ subsets: ["latin"] })
 export default function Home() {
   return (
     // wrap the page in a div with the dark mode class
-    <main className={inter.className + "flex min-h-screen flex-col py-8 px-16"}>
+    <main
+      className={
+        inter.className + " flex min-h-screen flex-col py-8 px-2 md:px-16"
+      }
+    >
       <PrincipalNews />
       <Opinion />
       <Sports />

@@ -34,7 +34,7 @@ export default function SettingsButton() {
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <span className="sr-only"></span>
+          <span className="sr-only">Configuracion</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-settings"

@@ -43,7 +43,7 @@ export default function Nav({ children }: { children: React.ReactNode }) {
   return (
     <>
       <motion.nav
-        className={`fixed z-10 top-0 flex items-center justify-between flex-wrap pt-4 pr-8 transition-transform duration-500 delay-100 ${
+        className={`fixed max-w-screen md:max-w-screen-xl w-full top-0 left-1/2 flex items-center justify-between flex-wrap pt-4 px-1 transition-transform duration-500 delay-100 ${
           hidden ? "z-[-1]" : "z-10 backdrop-blur"
         }`}
         variants={variants}
@@ -51,6 +51,7 @@ export default function Nav({ children }: { children: React.ReactNode }) {
         animate={hidden ? "hidden" : "visible"}
         /** I'm also going to add a custom easing curve and duration for the animation **/
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.3 }}
+        style={{ x: "-50%" }}
       >
         {children}
       </motion.nav>

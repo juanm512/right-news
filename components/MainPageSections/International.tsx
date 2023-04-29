@@ -22,7 +22,7 @@ export default function International() {
           <h2
             className={
               playfair.className +
-              " text-7xl leading-tight h-fit font-medium -skew-x-12 pl-16"
+              " text-5xl md:text-7xl leading-tight h-fit font-medium -skew-x-12 pl-2 md:pl-16"
             }
           >
             Internacional
@@ -42,8 +42,8 @@ export default function International() {
       </EntranceClipPath>
 
       {/* trending/lastest news */}
-      <section className="basis-full flex flex-col gap-8 items-start justify-between dark:text-gray-100 py-16">
-        <div className="basis-full flex flex-row-reverse gap-8 items-start justify-between ">
+      <section className="w-full flex flex-col gap-8 items-start justify-between dark:text-gray-100 py-16">
+        <div className="basis-full flex flex-col md:flex-row-reverse gap-8 items-start justify-between ">
           <div className="basis-1/4 flex flex-col justify-start self-end ">
             <div className="aspect-video">
               <Image
@@ -122,7 +122,7 @@ export default function International() {
             </div>
           </div>
         </div>
-        <div className="basis-full flex flex-row gap-8 items-start justify-between ">
+        <div className="basis-full flex flex-col md:flex-row gap-8 items-start justify-between ">
           <div className="basis-3/12 flex flex-col-reverse justify-start self-start ">
             <div className="aspect-w-9 aspect-h-9">
               <Image

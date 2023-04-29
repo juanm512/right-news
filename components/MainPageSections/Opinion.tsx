@@ -22,7 +22,7 @@ export default function Opinion() {
           <h2
             className={
               playfair.className +
-              " text-7xl leading-tight h-fit font-medium -skew-x-12"
+              " text-5xl md:text-7xl leading-tight h-fit font-medium -skew-x-12"
             }
           >
             Opiniones
@@ -42,7 +42,7 @@ export default function Opinion() {
       </EntranceClipPath>
 
       {/* trending/lastest news */}
-      <section className="basis-full flex flex-row-reverse gap-8 items-start justify-between dark:text-gray-100 py-16">
+      <section className="w-full flex flex-col md:flex-row-reverse gap-8 items-start justify-between dark:text-gray-100 py-16">
         <EntranceClipPath
           direction="downLeft"
           showInView={true}
